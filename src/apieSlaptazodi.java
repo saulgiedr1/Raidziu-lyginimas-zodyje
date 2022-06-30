@@ -4,7 +4,7 @@ public class apieSlaptazodi {
 
 
         String slaptazodis;
-        String slaptazodis1;
+
 
         Scanner skaitytuvas = new Scanner(System.in);
 
@@ -12,17 +12,24 @@ public class apieSlaptazodi {
         slaptazodis = skaitytuvas.nextLine();
         System.out.println("Slaptažodis yra:" + slaptazodis);
 
-        System.out.println("Įveskite slaptažodį: ");
-        slaptazodis1 = skaitytuvas.nextLine();
-        System.out.println("Slaptažodis yra:" + slaptazodis1);
+        String palyginimoRezultatas = zodzioLyginimas(slaptazodis);
+        System.out.println("palyginimoRezultatas = " + palyginimoRezultatas);
 
-
-
-        if (slaptazodis.equals(slaptazodis1)) {
-            System.out.println("gerai");
-        }
-
-       
 
     }
+    public static String gaunamasZodis (String a ){
+            int zodis=0;
+        for(int i=0; i<a.length(); i++){
+            if(a.equals(zodis)){
+                return "true";
+            }
+            else return "false";
+        }
+
+        return a;
+    }
+    public static String zodzioLyginimas(String a,String b){
+        for (int i=0; i < a.length(); i++) {
+            if(gaunamasZodis(a.equals(b)))
+        }
 }
